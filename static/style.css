@@ -128,30 +128,51 @@ input:focus {
     font-size: 14px;
     width: 100%;
 }
-/* Mobile Devices ke liye special settings */
+/* Mobile Devices ke liye Updated Settings */
 @media (max-width: 600px) {
+    /* Disclaimer Box Fix: Top se gap aur chota font taaki kate nahi */
+    .disclaimer-box {
+        margin: 60px 10px 15px 10px !important; /* Upar se 60px gap taaki notification bar se na takraye */
+        padding: 12px !important;
+        font-size: 0.8rem !important; /* Text thoda chota kiya */
+        line-height: 1.4;
+        text-align: center;
+        border-radius: 10px;
+    }
+
     .glass-card {
         padding: 20px;
-        margin: 10px;
-        width: 95%; /* Phone screen ke hisaab se width */
+        margin: 10px auto;
+        width: 92%; 
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2); /* Mobile par shadow clean dikhega */
     }
 
     .grid-container {
         display: grid;
-        grid-template-columns: 1fr; /* 2 column ki jagah 1 column kar dega */
-        gap: 15px;
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 12px;
     }
 
     h1 {
-        font-size: 1.5rem; /* Heading thodi choti */
+        font-size: 1.4rem; 
+        margin-top: 5px;
     }
 
+    /* Input fields phone par aache dikhne ke liye */
     .input-group input {
-        font-size: 16px; /* Phone par typing ke waqt zoom nahi hoga */
+        font-size: 16px; 
+        padding: 12px;
     }
 
     button {
         width: 100%;
-        padding: 15px;
+        padding: 14px;
+        font-size: 1rem;
+    }
+
+    /* Result text mobile par adjust karne ke liye */
+    .result-text {
+        font-size: 1.1rem;
+        word-wrap: break-word;
     }
 }
